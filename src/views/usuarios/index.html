@@ -2,6 +2,7 @@
 <h1>Usuarios</h1>
 
 <a href="{{ url_for('crear_usuario') }}">Agregar Usuario</a>
+<a href="{{ url_for('crear_usuario') }}">Editar Usuario</a>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -16,12 +17,12 @@
     <tbody>
         {% for user in users %}
         <tr>
-            <td>{{ user['id'] }}</td>
-            <td>{{ user['nombre'] }}</td>
-            <td>{{ user['apellido'] }}</td>
-            <td>{{ user['celular'] }}</td>
-            <td>{{ user['email'] }}</td>
-            <td>{{ user['password'] }}</td>
+            <td>{{ user['user.id'] }}</td>
+            <td>{{ user['user.nombre'] }}</td>
+            <td>{{ user['user.apellido'] }}</td>
+            <td>{{ user['user.celular'] }}</td>
+            <td>{{ user['user.email'] }}</td>
+            <td>{{ user['user.password'] }}</td>
         </tr>
         {%endfor%}
     </tbody>

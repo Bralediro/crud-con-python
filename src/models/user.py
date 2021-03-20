@@ -17,5 +17,12 @@ class UserModel():
         cursor.execute('insert into users(nombre,apellido,celular,email,password) values(?,?,?,?,?)', (nombre, apellido, celular, email, password))
         
         cursor.close()
-        
+
+    def traerdb(self):
+            
+        cursor = DB.cursor()
+        cursor.execute('show databases')
+        usuarios = cursor.fetchall()
+        cursor.close()
+        return usuarios
         
